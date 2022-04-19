@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #eee;
+  } */
+  
+  .typing.animate {
+    width: 21ch;
+    border-right: 0.1em solid black;
+    font-family: monospace;
+    font-size: 2em;
+    animation: type 2.5s steps(20), writer 1s infinite alternate,
+      delete 0.5s steps(5) 2.5s, type2 1s steps(10) 3s forwards;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .typing.animate::before {
+    content: "Happy Birthday, Bitch. ";
+    animation: type2 1s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
+  }
+  
+  @keyframes type {
+    from {
+      width: 0;
+    }
+    to {
+      width: 21ch;
+    }
+  }
+  
+  @keyframes type2 {
+    from {
+      width: 16ch;
+      content: "Happy Birthday, Dhalina. ";
+    }
+    to {
+      width: 25ch;
+      content: "Happy Birthday, Dhalina. ";
+    }
+  }
+  
+  @keyframes writer {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  @keyframes delete {
+    from {
+      width: 21ch;
+    }
+    to {
+      width: 16ch;
+    }
+  }
+  
+
+   html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase; */
+  }
+  
+  section {
+    block-size: 100vh;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    display: grid;
+    place-items: center;
+  }
+  section:nth-child(1) {
+    background-color: #eee;
+    color: black;
+  }
+  section:nth-child(2) {
+    background-color: #381D2A;
+    color: white;
+  }
+  section:nth-child(3) {
+    background-color: #eee;
+    color: black;
+  }
+  section:nth-child(4) {
+    background-color: #AABD8C;
+    color: black;
+  }
+  section:nth-child(5) {
+    background-color: #E9E3B4;
+    color: black;
+  }
+  section:nth-child(6) {
+    background-color: #F39B6D;
+    color: black;
+  }
+
+  .wrapper {
+    height: 100vh;
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .typing-demo {
+    width: 53ch;
+    animation: typing 2s steps(30), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
